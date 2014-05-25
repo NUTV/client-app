@@ -1,0 +1,27 @@
+{
+  "name": "client-app",
+  "version": "0.0.1",
+  "description": "Main client app for consuming and displaying the nutv api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startDev": "./node_modules/.bin/nodemon -i node_modules/ index.js",
+    "start": "./node_modules/.bin/forever index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/NUTV/client-app.git"
+  },
+  "author": "Richard Walker <digitalsadhu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NUTV/client-app/issues"
+  },
+  "homepage": "https://github.com/NUTV/client-app",
+  "devDependencies": {
+    "nodemon": "^1.0.19"
+  },
+  "dependencies": {
+    "forever": "^0.11.1"
+  }
+}
