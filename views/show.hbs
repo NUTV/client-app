@@ -1,0 +1,70 @@
+<section class="main-page-content">
+  <section class="left">
+    <section class="detail-panel">
+      <section class="show-title">
+        <h1>{{show.title}}</h1>
+      </section>
+      <section class="current-episode-banner">
+        <div class="show-episode-image">
+          <img
+            src="{{latestEpisode.thumbnails.maxres.url}}"
+            width="640">
+        </div>
+        <div class="show-episode-image-overlay">
+          <h2>{{episodeTitle latestEpisode.title}}</h2>
+          <p class="description">
+            {{episodeDescriptionSnippet latestEpisode.description}}
+          </p>
+          <a href="design2.html">Watch Episode</a>
+        </div>
+      </section>
+      <section class="share-buttons">
+        <span class='st_email_large' displayText='Email'></span>
+        <span class='st_facebook_large' displayText='Facebook'></span>
+        <span class='st_linkedin_large' displayText='LinkedIn'></span>
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_googleplus_large' displayText='Google +'></span>
+        <span class='st_pinterest_large' displayText='Pinterest'></span>
+      </section>
+    </section>
+  </section>
+  <aside class="right">
+    <section class="nutv-color-bar-chart">
+      <div class="light-purple"></div>
+      <div class="purple"></div>
+      <div class="light-blue"></div>
+      <div class="blue"></div>
+      <span class="clear block"></span>
+      <div class="logo">
+        <h2>nutv.ca</h2>
+        <h3>New University Television</h3>
+      </div>
+      <div class="green"></div>
+      <div class="light-green"></div>
+      <div class="yellow"></div>
+      <div class="orange"></div>
+      <span class="clear block"></span>
+    </section>
+    <section class="show-description">
+      <h2>{{show.title}}</h2>
+      {{show.description}}
+    </section>
+  </aside>
+  <div class="clear"></div>
+</section>
+<section class="previous-episodes">
+  <h2>Previous Full Frontal Shows</h2>
+  {{#each episodes}}
+  <div class="show-episode left">
+    <a href="">
+      <img src="{{thumbnails.medium.url}}">
+    </a>
+    <div class="episode-info">
+      <a href="">
+        <h3>{{episodeTitle title}} - <span class="date">{{episodeDate publishedAt}}</span></h3>
+      </a>
+      <p>{{episodeDescriptionSnippet description}}</p>
+    </div>
+  </div>
+  {{/each}}
+</section>
