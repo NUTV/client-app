@@ -1,1 +1,29 @@
-Show a list of shows
+<section class="main-page-content">
+  <section class="left">
+    {{{maintitle 'NUTV Shows'}}}
+    <section>
+      <ul>
+        {{#each shows}}
+        <li>
+          <a href="{{url 'shows' name}}">
+          <image
+            src="{{thumbnails.default.url}}"
+            width="{{thumbnails.default.width}}"
+            height="{{thumbnails.default.height}}">
+          <h2>{{title}}</h2>
+          <p>{{description}}</p>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+  </section>
+  <aside class="right">
+    {{{logobox}}}
+    <section class="show-description">
+      {{{secondarytitle 'description here'}}}
+      This is a description about shows
+    </section>
+  </aside>
+  <div class="clear"></div>
+</section>

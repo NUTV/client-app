@@ -85,18 +85,16 @@ html, body {
   display:none;
 }
 
-.show-title, .episode-title {
+.show-title, .episode-title, .main-title {
   padding:25px 0;
   margin:40px 0;
 }
-.show-title h1, .episode-title h1 {
+.show-title h1, .episode-title h1, .main-title {
   font-weight:normal;
   font-size:32px;
   margin:0;
   color:#06beda;
 }
-
-
 .current-episode-banner {
   position:relative;
   background-color:#000;
