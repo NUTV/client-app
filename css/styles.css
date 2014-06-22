@@ -300,3 +300,37 @@ html, body {
 }
 .episode-details .show-notes h2 {}
 .episode-details .show-notes .meta-info {}
+
+#shows-page ul.shows li {
+  border-bottom:1px #000 solid;
+  color:#91a2aa;
+  list-style-type:none;
+}
+#shows-page ul.shows li .details {
+  width:575px;
+  padding:15px 15px 15px 0;
+}
+#shows-page ul.shows li .details h2 {
+  margin-bottom:10px;
+  padding:0;
+  font-weight:bold;
+  font-size:16px;
+}
+#shows-page ul.shows li .details .description {
+  margin:0;
+  padding:0;
+  font-size:14px;
+}
+#shows-page ul.shows li img {
+  display:block;
+  padding:15px;
+}
+#shows-page ul.shows li a {
+  color:#91a2aa;
+}
+#shows-page ul.shows li.even {
+  background-color:#1a2426;
+}
+#shows-page ul.shows li.odd {
+
+}
