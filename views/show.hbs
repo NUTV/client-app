@@ -15,7 +15,7 @@
           <p class="description">
             {{episodeDescriptionSnippet latestEpisode.description}}
           </p>
-          <a href="{{url 'shows' show.name latestEpisode.number}}">Watch Episode</a>
+          <a href="{{url 'shows' show.name latestEpisode.urlName}}">Watch Episode</a>
         </div>
       </section>
       <section class="share-buttons">
@@ -56,7 +56,7 @@
   <h2>Previous Full Frontal Shows</h2>
   {{#each episodes}}
   <div class="show-episode left">
-    <a href="{{url 'shows' ../show.name number}}">
+    <a href="{{url 'shows' ../show.name urlName}}">
       <img src="{{thumbnails.medium.url}}">
     </a>
     <div class="episode-info">
