@@ -11,7 +11,7 @@
             width="640">
         </div>
         <div class="show-episode-image-overlay">
-          <h2>{{episodeTitle latestEpisode.title}}</h2>
+          <h2>{{episodeTitle latestEpisode.title show.title}}</h2>
           <p class="description">
             {{episodeDescriptionSnippet latestEpisode.description}}
           </p>
@@ -53,15 +53,16 @@
   <div class="clear"></div>
 </section>
 <section class="previous-episodes">
-  <h2>Previous Full Frontal Shows</h2>
+  <h2>Previous {{show.title}} Shows</h2>
   {{#each episodes}}
   <div class="show-episode left">
     <a href="{{url 'shows' ../show.name urlName}}">
       <img src="{{thumbnails.medium.url}}">
     </a>
     <div class="episode-info">
-      <a href="{{url 'shows' ../show.name number}}">
-        <h3>{{episodeTitle title}} - <span class="date">{{episodeDate publishedAt}}</span></h3>
+      <a href="{{url 'shows' ../show.name urlName}}">
+        <h3>{{episodeTitle title ../show.title}}</h3>
+        <span class="date">{{episodeDate publishedAt}}</span>
       </a>
       <p>{{episodeDescriptionSnippet description}}</p>
     </div>

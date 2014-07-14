@@ -1,27 +1,11 @@
 <section id="episode-page" class="main-page-content">
   <section class="left">
-    {{{maintitle episode.title}}}
+    {{{mainTitle episode.title show.title}}}
     <section>
       <section id="video">
         {{{episode.html}}}
         <!--hack to fix missing iframe tag coming from youtube api-->
         </iframe>
-      </section>
-      <section id="metadata">
-        <table>
-          <tr>
-            <td>Views</td>
-            <td>{{episode.views}}</td>
-          </tr>
-          <tr>
-            <td>Likes</td>
-            <td>{{episode.likes}}</td>
-          </tr>
-          <tr>
-            <td>Favorites</td>
-            <td>{{episode.favorites}}</td>
-          </tr>
-        </table>
       </section>
       <section id="description">
         {{episode.description}}
@@ -31,8 +15,8 @@
   <aside class="right">
     {{{logobox}}}
     <section class="show-description">
-      {{{secondarytitle show.title}}}
-      {{show.description}}
+      {{{secondaryTitle show.title}}}
+      {{showDescription show.description}}
     </section>
   </aside>
   <div class="clear"></div>
@@ -40,12 +24,13 @@
     <h2>Previous episodes</h2>
     {{#each episodes}}
     <div class="show-episode left">
-      <a href="{{url 'shows' ../show.name number}}">
+      <a href="{{url 'shows' ../show.name urlName}}">
         <img src="{{thumbnails.medium.url}}">
       </a>
       <div class="episode-info">
-        <a href="{{url 'shows' ../show.name number}}">
-          <h3>{{episodeTitle title}} - <span class="date">{{episodeDate publishedAt}}</span></h3>
+        <a href="{{url 'shows' ../show.name urlName}}">
+          <h3>{{{episodeTitle title ../show.title}}}</h3>
+          <span class="date">{{episodeDate publishedAt}}</span>
         </a>
         <p>{{episodeDescriptionSnippet description}}</p>
       </div>
