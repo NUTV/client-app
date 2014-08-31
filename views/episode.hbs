@@ -24,11 +24,11 @@
     <h2>Previous episodes</h2>
     {{#each episodes}}
     <div class="show-episode left">
-      <a href="{{url 'shows' ../show.name urlName}}">
+      <a href="{{url ../show.name urlName}}">
         <img src="{{thumbnails.medium.url}}">
       </a>
       <div class="episode-info">
-        <a href="{{url 'shows' ../show.name urlName}}">
+        <a href="{{url ../show.name urlName}}">
           <h3>{{{episodeTitle title ../show.title}}}</h3>
           <span class="date">{{episodeDate publishedAt}}</span>
         </a>
